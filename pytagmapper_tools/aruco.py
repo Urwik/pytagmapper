@@ -11,7 +11,7 @@ class ArucoDetector:
             self.old_api = True
         except AttributeError:
             # new aruco api
-            self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_ARUCO_ORIGINAL)
+            self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
             self.aruco_params =  cv2.aruco.DetectorParameters()
             self.aruco_detector = cv2.aruco.ArucoDetector(self.aruco_dict, self.aruco_params)
             self.old_api = False
